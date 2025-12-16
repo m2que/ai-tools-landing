@@ -22,17 +22,13 @@
     gtag('config', 'G-SKN1Y8ZPF1'); { debug_mode: true });
   </script>
 <script>
-  function trackOutbound(appName, url) {
-    console.log("GA CLICK:", appName, url);  // <-- add this line
-    if (typeof gtag === "function") {
-      gtag('event', 'outbound_click', {
-        app_name: appName,
-        link_url: url,
-        transport_type: 'beacon',
-        debug_mode: true
-      });
-    }
-  }
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SKN1Y8ZPF1', {
+    debug_mode: true
+  });
 </script>
 
 </head>
