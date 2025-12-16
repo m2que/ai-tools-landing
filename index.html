@@ -44,7 +44,6 @@
  <ul>
   <li>
     <a href="https://brand-equity-dashboard-cbbe-model-462508447345.us-west1.run.app/"
-       target="_blank"
        rel="noopener"
        data-app="Brand Equity Dashboard">
       Brand Equity Dashboard
@@ -53,7 +52,6 @@
 
   <li>
     <a href="https://brand-architecture-visualizer-462508447345.us-west1.run.app/"
-       target="_blank"
        rel="noopener"
        data-app="Brand Architecture Visualizer">
       Brand Architecture Visualizer
@@ -62,7 +60,6 @@
 
   <li>
     <a href="https://brand-element-analyzer-462508447345.us-west1.run.app/"
-       target="_blank"
        rel="noopener"
        data-app="Brand Elements Analyzer">
       Brand Elements Analyzer
@@ -71,7 +68,6 @@
 
   <li>
     <a href="https://brand-position-mapper-462508447345.us-west1.run.app/"
-       target="_blank"
        rel="noopener"
        data-app="Brand Position Mapper">
       Brand Position Mapper
@@ -80,7 +76,6 @@
 
   <li>
     <a href="https://customer-segment-explorer-462508447345.us-west1.run.app/"
-       target="_blank"
        rel="noopener"
        data-app="Customer Segment Explorer">
       Customer Segment Explorer
@@ -100,15 +95,16 @@
       if (typeof gtag === 'function') {
         gtag('event', 'outbound_click', {
           app_name: appName,
-          link_url: url,
-          transport_type: 'beacon'
+          link_url: url
         });
       }
 
-      window.open(url, '_blank', 'noopener');
+      // 🔑 allow GA time to send before navigation
+      setTimeout(() => {
+        window.open(url, '_blank', 'noopener');
+      }, 300);
     });
   });
 </script>
-
 </body>
 </html>
