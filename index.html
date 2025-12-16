@@ -21,6 +21,17 @@
     gtag('js', new Date());
     gtag('config', 'G-SKN1Y8ZPF1');
   </script>
+  <script>
+  function trackOutbound(appName, url) {
+    if (typeof gtag === "function") {
+      gtag('event', 'outbound_click', {
+        app_name: appName,
+        link_url: url,
+        transport_type: 'beacon'
+      });
+    }
+  }
+</script>
 </head>
 
 <body>
