@@ -36,72 +36,45 @@
 <body>
   <h1>AI Marketing AI Tools</h1>
   <p>Select a tool:</p>
-
- <ul>
+<ul>
   <li>
     <a href="https://brand-equity-dashboard-cbbe-model-462508447345.us-west1.run.app/"
-       rel="noopener"
-       data-app="Brand Equity Dashboard">
+       target="_blank"
+       rel="noopener">
       Brand Equity Dashboard
     </a>
   </li>
 
   <li>
     <a href="https://brand-architecture-visualizer-462508447345.us-west1.run.app/"
-       rel="noopener"
-       data-app="Brand Architecture Visualizer">
+       target="_blank"
+       rel="noopener">
       Brand Architecture Visualizer
     </a>
   </li>
 
   <li>
     <a href="https://brand-element-analyzer-462508447345.us-west1.run.app/"
-       rel="noopener"
-       data-app="Brand Elements Analyzer">
+       target="_blank"
+       rel="noopener">
       Brand Elements Analyzer
     </a>
   </li>
 
   <li>
     <a href="https://brand-position-mapper-462508447345.us-west1.run.app/"
-       rel="noopener"
-       data-app="Brand Position Mapper">
+       target="_blank"
+       rel="noopener">
       Brand Position Mapper
     </a>
   </li>
 
   <li>
     <a href="https://customer-segment-explorer-462508447345.us-west1.run.app/"
-       rel="noopener"
-       data-app="Customer Segment Explorer">
+       target="_blank"
+       rel="noopener">
       Customer Segment Explorer
     </a>
   </li>
 </ul>
-<script>
-  document.querySelectorAll('a[data-app]').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
 
-      const appName = link.dataset.app;
-      const url = link.href;
-
-      if (typeof gtag === 'function') {
-        gtag('event', 'outbound_click', {
-          app_name: appName,
-          link_url: url,
-          event_callback: function () {
-            window.open(url, '_blank', 'noopener');
-          }
-        });
-
-        setTimeout(() => window.open(url, '_blank', 'noopener'), 800);
-      } else {
-        window.open(url, '_blank', 'noopener');
-      }
-    });
-  });
-</script>
-
-</body>
-</html>
