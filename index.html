@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MarketLearn | Evidence-Based AI Tools for Business Students</title>
+  <meta
+    name="description"
+    content="MarketLearn gives business students evidence-based AI tools for brand and marketing analysis, starting with the CBBE Analyzer."
+  />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SKN1Y8ZPF1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-SKN1Y8ZPF1');
+  </script>
+  <style>
+    :root {
+      --bg: #f5efe6;
+      --surface: rgba(255, 252, 247, 0.9);
+      --surface-strong: #fffaf2;
+      --ink: #1f2937;
+      --muted: #5f6c7b;
+      --line: rgba(113, 86, 56, 0.16);
+      --accent: #0f766e;
+      --accent-strong: #115e59;
+      --warm: #d97706;
+      --shadow: 0 24px 80px rgba(61, 41, 20, 0.12);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(217, 119, 6, 0.16), transparent 32%),
+        radial-gradient(circle at top right, rgba(15, 118, 110, 0.14), transparent 28%),
+        linear-gradient(180deg, #fffaf2 0%, #f7f1e7 48%, #f3ecdf 100%);
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .shell {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(18px);
+      background: rgba(245, 239, 230, 0.78);
+      border-bottom: 1px solid rgba(113, 86, 56, 0.1);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 18px 0;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand-mark {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-sub {
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-family: Arial, sans-serif;
+      font-size: 0.96rem;
+      color: var(--muted);
+    }
+
+    .nav a:hover {
+      color: var(--accent-strong);
+    }
+
+    .nav-cta {
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: white;
+      font-weight: 700;
+    }
+
+    .hero {
+      padding: 72px 0 56px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    .hero-copy,
+    .hero-panel,
+    .section-card,
+    .tool-card,
+    .workflow-card,
+    .trust-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-copy {
+      padding: 48px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(15, 118, 110, 0.08);
+      color: var(--accent-strong);
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      line-height: 1.08;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      max-width: 12ch;
+    }
+
+    .hero-lead {
+      margin-top: 22px;
+      max-width: 62ch;
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+    }
+
+    .hero-lead strong {
+      color: var(--ink);
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 15px 22px;
+      border-radius: 999px;
+      font-family: Arial, sans-serif;
+      font-size: 0.96rem;
+      font-weight: 700;
+      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button-primary {
+      background: var(--accent);
+      color: white;
+      box-shadow: 0 14px 28px rgba(15, 118, 110, 0.24);
+    }
+
+    .button-secondary {
+      background: rgba(255, 250, 242, 0.88);
+      border: 1px solid rgba(15, 118, 110, 0.18);
+      color: var(--accent-strong);
+    }
+
+    .hero-points {
+      margin-top: 28px;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      font-family: Arial, sans-serif;
+      color: var(--ink);
+    }
+
+    .hero-points li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .hero-points li::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      margin-top: 7px;
+      border-radius: 999px;
+      background: var(--warm);
+      flex-shrink: 0;
+    }
+
+    .hero-panel {
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+      background:
+        linear-gradient(180deg, rgba(255, 252, 247, 0.96), rgba(250, 244, 235, 0.96)),
+        radial-gradient(circle at top, rgba(15, 118, 110, 0.08), transparent 44%);
+    }
+
+    .panel-label,
+    .section-label,
+    .tool-status {
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .panel-label {
+      color: var(--accent-strong);
+    }
+
+    .panel-score {
+      font-size: 4rem;
+      line-height: 1;
+      color: var(--accent-strong);
+    }
+
+    .panel-copy,
+    .section-copy,
+    .tool-copy,
+    .workflow-copy,
+    .footer-copy {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .panel-list {
+      margin: 0;
+      padding-left: 18px;
+      font-family: Arial, sans-serif;
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    section {
+      padding: 18px 0 54px;
+    }
+
+    .section-card {
+      padding: 34px;
+    }
+
+    .section-head {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .featured-grid,
+    .tool-grid,
+    .workflow-grid,
+    .trust-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .featured-grid {
+      grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+      align-items: start;
+    }
+
+    .feature-box,
+    .feature-side {
+      padding: 28px;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: var(--surface-strong);
+    }
+
+    .feature-box h3,
+    .tool-card h3,
+    .workflow-card h3,
+    .trust-card h3 {
+      font-size: 1.55rem;
+      margin-bottom: 12px;
+    }
+
+    .feature-list {
+      margin: 18px 0 0;
+      padding-left: 18px;
+      font-family: Arial, sans-serif;
+      color: var(--ink);
+      line-height: 1.8;
+    }
+
+    .feature-side {
+      display: grid;
+      gap: 16px;
+      background: linear-gradient(180deg, rgba(15, 118, 110, 0.06), rgba(217, 119, 6, 0.05));
+    }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .stat {
+      padding: 18px 16px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(15, 118, 110, 0.08);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.3rem;
+      margin-bottom: 4px;
+    }
+
+    .stat span {
+      font-family: Arial, sans-serif;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .tool-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .tool-card,
+    .workflow-card,
+    .trust-card {
+      padding: 24px;
+    }
+
+    .tool-status {
+      display: inline-flex;
+      width: fit-content;
+      padding: 8px 12px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+
+    .tool-status-live {
+      background: rgba(15, 118, 110, 0.1);
+      color: var(--accent-strong);
+    }
+
+    .tool-status-soon {
+      background: rgba(217, 119, 6, 0.12);
+      color: #92400e;
+    }
+
+    .tool-link {
+      margin-top: 20px;
+      display: inline-flex;
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      color: var(--accent-strong);
+    }
+
+    .tool-link-disabled {
+      color: var(--muted);
+      cursor: default;
+    }
+
+    .workflow-grid,
+    .trust-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .workflow-step {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(15, 118, 110, 0.1);
+      color: var(--accent-strong);
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .pricing-box {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(220px, 0.8fr);
+      gap: 18px;
+      align-items: center;
+      padding: 28px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(15, 118, 110, 0.1), rgba(217, 119, 6, 0.08));
+      border: 1px solid rgba(15, 118, 110, 0.12);
+    }
+
+    .footer {
+      padding: 12px 0 52px;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(113, 86, 56, 0.16);
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .featured-grid,
+      .pricing-box,
+      .tool-grid,
+      .workflow-grid,
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .topbar-inner,
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+      }
+
+      .hero-copy,
+      .hero-panel,
+      .section-card {
+        padding: 26px;
+      }
+
+      h1 {
+        max-width: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark">MarketLearn</span>
+        <span class="brand-sub">Evidence-based AI for business students</span>
+      </a>
+      <nav class="nav">
+        <a href="#tools">Tools</a>
+        <a href="#coursework">How It Works</a>
+        <a href="#pricing">Access</a>
+        <a class="nav-cta" href="https://cbbe.marketlearn.online" target="_blank" rel="noopener">Try CBBE</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Built for business students</div>
+          <h1>Evidence-based AI tools for stronger academic brand analysis.</h1>
+          <p class="hero-lead">
+            <strong>MarketLearn is an evidence-based AI toolkit for business students.</strong>
+            It helps students analyze brands faster, structure ideas more clearly, and build stronger coursework outputs grounded in references, frameworks, and academic-style reasoning rather than generic AI answers.
+          </p>
+          <div class="cta-row">
+            <a class="button button-primary" href="https://cbbe.marketlearn.online" target="_blank" rel="noopener">Try the CBBE Analyzer</a>
+            <a class="button button-secondary" href="#tools">Explore the Toolkit</a>
+          </div>
+          <ul class="hero-points">
+            <li>Designed for reports, case studies, presentations, and coursework in branding and marketing.</li>
+            <li>Structured around evidence, references, and established business frameworks.</li>
+            <li>Built to help students explain brand performance, not just generate surface-level text.</li>
+          </ul>
+        </div>
+
+        <aside class="hero-panel">
+          <div>
+            <div class="panel-label">Featured now</div>
+            <a class="panel-score" href="https://cbbe.marketlearn.online" target="_blank" rel="noopener">CBBE</a>
+            <p class="panel-copy">
+              The Customer-Based Brand Equity Analyzer is the first live MarketLearn tool and the current front door into the platform.
+            </p>
+          </div>
+          <ul class="panel-list">
+            <li>Explains salience, performance, imagery, judgements, feelings, and resonance.</li>
+            <li>Supports student reporting with visual outputs and references.</li>
+            <li>Provides a more academically useful output than ordinary generic AI prompting.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="shell section-card">
+        <div class="section-head">
+          <div class="section-label">Start here</div>
+          <h2>Begin with the CBBE Analyzer</h2>
+          <p class="section-copy">
+            MarketLearn currently leads with one flagship tool: a CBBE analysis experience designed to help business students interpret brand equity using Keller's framework, supported by clear explanations and usable evidence.
+          </p>
+        </div>
+
+        <div class="featured-grid">
+          <div class="feature-box">
+            <h3>What students get from CBBE</h3>
+            <p class="section-copy">
+              Instead of a generic answer, the tool produces structured brand analysis with clearer score reasoning, references for academic work, and outputs that can support coursework, presentations, and case discussions.
+            </p>
+            <ul class="feature-list">
+              <li>Analyze all six levels of Keller's CBBE model with explained score drivers.</li>
+              <li>Use visual outputs to support presentations, tutorials, and class discussion.</li>
+              <li>Pull references into reports so the work feels grounded rather than invented.</li>
+            </ul>
+            <div class="cta-row">
+              <a class="button button-primary" href="https://cbbe.marketlearn.online" target="_blank" rel="noopener">Open CBBE Analyzer</a>
+            </div>
+          </div>
+
+          <div class="feature-side">
+            <div class="section-label">What makes it different</div>
+            <p class="section-copy">
+              MarketLearn is not positioned as ordinary AI output. Its purpose is to help students produce more evidence-aware, framework-based marketing analysis.
+            </p>
+            <div class="stats-row">
+              <div class="stat">
+                <strong>1st</strong>
+                <span>free analysis to begin exploring the tool</span>
+              </div>
+              <div class="stat">
+                <strong>6</strong>
+                <span>CBBE dimensions interpreted in a structured way</span>
+              </div>
+              <div class="stat">
+                <strong>1</strong>
+                <span>shared platform vision for future tools and credits</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="coursework">
+      <div class="shell section-card">
+        <div class="section-head">
+          <div class="section-label">Built for coursework</div>
+          <h2>How business students use MarketLearn</h2>
+          <p class="section-copy">
+            The platform is designed to help students move from raw brand information to more structured strategic thinking that can be used in academic outputs.
+          </p>
+        </div>
+
+        <div class="workflow-grid">
+          <article class="workflow-card">
+            <div class="workflow-step">1</div>
+            <h3>Brand Reports</h3>
+            <p class="workflow-copy">Build stronger coursework by using structured brand analysis instead of starting from a blank page.</p>
+          </article>
+          <article class="workflow-card">
+            <div class="workflow-step">2</div>
+            <h3>Case Study Prep</h3>
+            <p class="workflow-copy">Use the framework output to identify where a brand is strong, weak, distinctive, or strategically vulnerable.</p>
+          </article>
+          <article class="workflow-card">
+            <div class="workflow-step">3</div>
+            <h3>Presentations</h3>
+            <p class="workflow-copy">Turn the analysis into visuals, clearer talking points, and evidence-based discussion for class presentations.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools">
+      <div class="shell section-card">
+        <div class="section-head">
+          <div class="section-label">The toolkit</div>
+          <h2>A growing suite of AI tools for brand and marketing work</h2>
+          <p class="section-copy">
+            CBBE is the lead live tool today. The broader MarketLearn suite is intended to support different kinds of brand and strategy analysis as the platform expands.
+          </p>
+        </div>
+
+        <div class="tool-grid">
+          <article class="tool-card">
+            <div class="tool-status tool-status-live">Live now</div>
+            <h3>CBBE Analyzer</h3>
+            <p class="tool-copy">Evaluate brand equity with structured explanations, score drivers, visual outputs, and evidence-oriented references.</p>
+            <a class="tool-link" href="https://cbbe.marketlearn.online" target="_blank" rel="noopener">Launch tool</a>
+          </article>
+          <article class="tool-card">
+            <div class="tool-status tool-status-soon">Coming soon</div>
+            <h3>Brand Architecture Visualizer</h3>
+            <p class="tool-copy">Map relationships between master brands, sub-brands, endorsed brands, and product lines in a clearer strategic format.</p>
+            <span class="tool-link tool-link-disabled">Coming soon</span>
+          </article>
+          <article class="tool-card">
+            <div class="tool-status tool-status-soon">Coming soon</div>
+            <h3>Brand Elements Analyzer</h3>
+            <p class="tool-copy">Review names, logos, taglines, packaging, and other brand assets with a more structured marketing lens.</p>
+            <span class="tool-link tool-link-disabled">Coming soon</span>
+          </article>
+          <article class="tool-card">
+            <div class="tool-status tool-status-soon">Coming soon</div>
+            <h3>Brand Position Mapper</h3>
+            <p class="tool-copy">Compare a brand's claimed position against likely customer associations, competitors, and strategic whitespace.</p>
+            <span class="tool-link tool-link-disabled">Coming soon</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <div class="shell section-card">
+        <div class="section-head">
+          <div class="section-label">Access model</div>
+          <h2>Start free, then unlock more as the platform grows</h2>
+        </div>
+        <div class="pricing-box">
+          <div>
+            <p class="section-copy">
+              MarketLearn is being built as a shared student toolkit. Start with a free analysis, then unlock additional analyses and future tools through a shared credit model as the platform develops.
+            </p>
+          </div>
+          <div class="cta-row">
+            <a class="button button-primary" href="https://cbbe.marketlearn.online" target="_blank" rel="noopener">Try CBBE</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shell trust-grid">
+        <article class="trust-card">
+          <h3>Evidence-aware outputs</h3>
+          <p class="workflow-copy">The ambition is to help students work with references, frameworks, and structured logic rather than rely on unsupported generic output.</p>
+        </article>
+        <article class="trust-card">
+          <h3>Academic usefulness</h3>
+          <p class="workflow-copy">MarketLearn is intended to support case work, coursework drafts, revision, and presentation preparation in business education contexts.</p>
+        </article>
+        <article class="trust-card">
+          <h3>Critical use still matters</h3>
+          <p class="workflow-copy">Students should still evaluate outputs critically, cross-check evidence, and develop their own interpretation in academic work.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <p class="footer-copy">MarketLearn is an evolving AI toolkit for business students, starting with evidence-based brand analysis.</p>
+      <div class="footer-links">
+        <a href="#tools">Tools</a>
+        <a href="#pricing">Access</a>
+        <a href="https://cbbe.marketlearn.online" target="_blank" rel="noopener">Try CBBE</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
