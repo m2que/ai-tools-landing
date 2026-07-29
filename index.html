@@ -588,14 +588,22 @@
     .tool-link {
       margin-top: 20px;
       display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 15px 22px;
+      border-radius: 999px;
       font-family: Arial, sans-serif;
+      font-size: 0.96rem;
       font-weight: 700;
-      color: var(--accent-strong);
+      color: white;
+      background: var(--accent);
+      box-shadow: 0 14px 28px rgba(15, 118, 110, 0.24);
+      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
     }
 
-    .tool-link-disabled {
-      color: var(--muted);
-      cursor: default;
+    .tool-link:hover {
+      transform: translateY(-1px);
     }
 
     .workflow-grid,
@@ -820,7 +828,7 @@
               </div>
             </div>
             <p class="tool-copy">Evaluate brand equity with structured explanations, score drivers, visual outputs, and evidence-oriented references.</p>
-            <a class="tool-link" href="https://bpm.marketlearn.online" target="_blank" rel="noopener">Open tool</a>
+            <a class="tool-link" href="https://cbbe.marketlearn.online" target="_blank" rel="noopener">Open tool</a>
           </article>
           <article class="tool-card tool-card-live">
             <div class="tool-card-head">
@@ -834,7 +842,7 @@
               </div>
             </div>
             <p class="tool-copy">Compare a brand's claimed position against likely customer associations, competitors, and strategic whitespace.</p>
-            <a class="tool-link" href="https://cbbe.marketlearn.online" target="_blank" rel="noopener">Open tool</a>
+            <a class="tool-link" href="https://bpm.marketlearn.online" target="_blank" rel="noopener">Open tool</a>
           </article>
           <article class="tool-card">
             <div class="tool-status tool-status-soon">Coming soon</div>
@@ -849,7 +857,6 @@
               </div>
             </div>
             <p class="tool-copy">Map relationships between master brands, sub-brands, endorsed brands, and product lines in a clearer strategic format.</p>
-            <span class="tool-link tool-link-disabled">Coming soon</span>
           </article>
           <article class="tool-card">
             <div class="tool-status tool-status-soon">Coming soon</div>
@@ -864,7 +871,6 @@
               </div>
             </div>
             <p class="tool-copy">Review names, logos, taglines, packaging, and other brand assets with a more structured marketing lens.</p>
-            <span class="tool-link tool-link-disabled">Coming soon</span>
           </article>
         </div>
       </div>
