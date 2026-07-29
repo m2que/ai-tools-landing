@@ -6,7 +6,7 @@
   <title>MarketLearn | Evidence-Based AI Tools for Business Students</title>
   <meta
     name="description"
-    content="MarketLearn gives business students evidence-based AI tools for brand and marketing analysis, starting with the CBBE Analyzer."
+    content="MarketLearn gives business students evidence-based AI tools for brand and marketing analysis, starting with the Consumer Based Brand Equity (CBBE) Analyzer."
   />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SKN1Y8ZPF1"></script>
   <script>
@@ -78,6 +78,35 @@
 
     .brand {
       display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      color: var(--accent-strong);
+      background: linear-gradient(135deg, rgba(15, 118, 110, 0.14), rgba(217, 119, 6, 0.12));
+      border: 1px solid rgba(15, 118, 110, 0.12);
+    }
+
+    .brand-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .brand-copy {
+      display: flex;
       flex-direction: column;
       gap: 2px;
     }
@@ -90,7 +119,7 @@
 
     .brand-sub {
       font-family: Arial, sans-serif;
-      font-size: 0.78rem;
+      font-size: 0.9rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--muted);
@@ -123,7 +152,7 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+      grid-template-columns: minmax(0, 1.38fr) minmax(272px, 0.62fr);
       gap: 32px;
       align-items: stretch;
     }
@@ -169,7 +198,7 @@
 
     h1 {
       margin-top: 20px;
-      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      font-size: clamp(1.98rem, 4.5vw, 3.78rem);
       max-width: 12ch;
     }
 
@@ -271,6 +300,9 @@
 
     .panel-label {
       color: var(--accent-strong);
+      font-size: 0.94rem;
+      letter-spacing: 0.12em;
+      margin-bottom: 16px;
     }
 
     .panel-score {
@@ -290,12 +322,83 @@
       line-height: 1.75;
     }
 
+    .hero-panel .panel-copy {
+      margin-top: 0;
+      margin-bottom: 22px;
+    }
+
     .panel-list {
       margin: 0;
       padding-left: 18px;
       font-family: Arial, sans-serif;
       color: var(--ink);
       line-height: 1.7;
+    }
+
+    .panel-tools {
+      display: grid;
+      gap: 14px;
+    }
+
+    .panel-tool {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(15, 118, 110, 0.08);
+    }
+
+    .panel-tool-head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .panel-tool-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      min-width: 52px;
+      min-height: 52px;
+      border-radius: 16px;
+      color: var(--accent-strong);
+      background: linear-gradient(135deg, rgba(15, 118, 110, 0.14), rgba(217, 119, 6, 0.12));
+      border: 1px solid rgba(15, 118, 110, 0.12);
+    }
+
+    .panel-tool-icon svg {
+      width: 30px;
+      height: 30px;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .panel-tool-icon-bpm svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    .panel-tool-content {
+      min-width: 0;
+    }
+
+    .panel-tool h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .panel-tool-title {
+      color: var(--ink);
+    }
+
+    .panel-tool-title:hover {
+      color: var(--accent-strong);
     }
 
     section {
@@ -386,13 +489,22 @@
     }
 
     .tool-grid {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .tool-card,
     .workflow-card,
     .trust-card {
       padding: 24px;
+    }
+
+    .tool-card-live {
+      padding: 30px;
+      background:
+        linear-gradient(180deg, rgba(255, 252, 247, 0.98), rgba(252, 247, 239, 0.98)),
+        radial-gradient(circle at top right, rgba(15, 118, 110, 0.1), transparent 42%);
+      border-color: rgba(15, 118, 110, 0.22);
+      box-shadow: 0 28px 90px rgba(15, 118, 110, 0.12);
     }
 
     .tool-status {
@@ -411,6 +523,66 @@
     .tool-status-soon {
       background: rgba(217, 119, 6, 0.12);
       color: #92400e;
+    }
+
+    .tool-card-live h3 {
+      font-size: 1.8rem;
+    }
+
+    .tool-card-live .tool-copy {
+      color: var(--ink);
+    }
+
+    .tool-card-live .tool-link {
+      margin-top: 24px;
+    }
+
+    .tool-card-head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .tool-card-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      color: var(--accent-strong);
+      background: linear-gradient(135deg, rgba(15, 118, 110, 0.14), rgba(217, 119, 6, 0.12));
+      border: 1px solid rgba(15, 118, 110, 0.12);
+    }
+
+    .tool-card-icon svg {
+      width: 30px;
+      height: 30px;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .tool-card-icon-cbbe svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    .tool-card-icon-bpm svg {
+      width: 38px;
+      height: 28px;
+    }
+
+    .tool-card-heading {
+      min-width: 0;
+    }
+
+    .tool-card-heading h3 {
+      margin-bottom: 0;
     }
 
     .tool-link {
@@ -530,17 +702,38 @@
   </style>
 </head>
 <body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none" aria-hidden="true">
+    <symbol id="icon-marketlearn" viewBox="0 0 24 24">
+      <path d="M12 20V10"></path>
+      <path d="M18 20V4"></path>
+      <path d="M6 20v-4"></path>
+    </symbol>
+    <symbol id="icon-cbbe" viewBox="0 0 24 24">
+      <path d="M2.5 16.88a1 1 0 0 1-.32-1.43l9-13.02a1 1 0 0 1 1.64 0l9 13.01a1 1 0 0 1-.32 1.44l-8.51 4.86a2 2 0 0 1-1.98 0Z"></path>
+      <path d="M12 2v20"></path>
+    </symbol>
+    <symbol id="icon-bpm" viewBox="0 0 24 24">
+      <path d="M12 23V1"></path>
+      <path d="M1 12h22"></path>
+    </symbol>
+  </svg>
   <header class="topbar">
     <div class="shell topbar-inner">
       <a class="brand" href="#top">
-        <span class="brand-mark">MarketLearn</span>
-        <span class="brand-sub">Evidence-based AI for business students</span>
+        <span class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <use href="#icon-marketlearn"></use>
+          </svg>
+        </span>
+        <span class="brand-copy">
+          <span class="brand-mark">MarketLearn</span>
+          <span class="brand-sub">Evidence-based AI for business intelligence</span>
+        </span>
       </a>
       <nav class="nav">
-        <a href="#tools">Tools</a>
         <a href="#coursework">How It Works</a>
         <a href="#pricing">Access</a>
-        <a class="nav-cta" href="https://cbbe.marketlearn.online" target="_blank" rel="noopener">Try CBBE</a>
+        <a class="nav-cta" href="#tools">Explore tools</a>
       </nav>
     </div>
   </header>
@@ -550,69 +743,164 @@
       <div class="shell hero-grid">
         <div class="hero-copy">
           <div class="eyebrow">Built for business students</div>
-          <h1>Evidence-based AI tools for stronger academic brand analysis.</h1>
+          <h1>Evidence-based tools for targeted market analysis tasks</h1>
           <p class="hero-lead">
-            <strong>MarketLearn is an evidence-based AI toolkit for business students.</strong>
-            It helps students analyze brands faster, structure ideas more clearly, and build stronger coursework outputs grounded in references, frameworks, and academic-style reasoning rather than generic AI answers.
+            <strong>MarketLearn is an evidence-based AI toolkit for business insights.</strong>
+            It helps you analyze businesses and markets faster, structure strategy more clearly, and build stronger arguments for reports and proposals with evidence based on verified references and established frameworks.
           </p>
           <div class="cta-row">
-            <a class="button button-primary" href="https://cbbe.marketlearn.online" target="_blank" rel="noopener">Try the CBBE Analyzer</a>
             <a class="button button-secondary" href="#tools">Explore the Toolkit</a>
           </div>
           <ul class="hero-points">
             <li>Designed for reports, case studies, presentations, and coursework in branding and marketing.</li>
             <li>Structured around evidence, references, and established business frameworks.</li>
-            <li>Built to help students explain brand performance, not just generate surface-level text.</li>
+            <li>Built to help students and managers diagnose what drives brand performance, interpret the evidence, and make informed decisions.</li>
           </ul>
         </div>
 
         <aside class="hero-panel">
           <div>
-            <div class="panel-label">Featured now</div>
-            <a class="panel-score" href="https://cbbe.marketlearn.online" target="_blank" rel="noopener">CBBE</a>
+            <div class="panel-label">Featured tools</div>
             <p class="panel-copy">
-              The Customer-Based Brand Equity Analyzer is the first live MarketLearn tool and the current front door into the platform.
+              Start with our marketing analysis tools, each built for a specific marketing task.
             </p>
           </div>
-          <ul class="panel-list">
-            <li>Explains salience, performance, imagery, judgements, feelings, and resonance.</li>
-            <li>Supports student reporting with visual outputs and references.</li>
-            <li>Provides a more academically useful output than ordinary generic AI prompting.</li>
-          </ul>
+          <div class="panel-tools">
+            <div class="panel-tool">
+              <div class="panel-tool-content">
+                <div class="panel-tool-head">
+                  <div class="panel-tool-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <use href="#icon-cbbe"></use>
+                    </svg>
+                  </div>
+                  <h3><a class="panel-tool-title" href="https://cbbe.marketlearn.online" target="_blank" rel="noopener">Consumer Based Brand Equity (CBBE) Analyzer</a></h3>
+                </div>
+                <p class="panel-copy">Interpret salience, performance, imagery, judgements, feelings, and resonance through a structured Keller-based lens.</p>
+              </div>
+            </div>
+            <div class="panel-tool">
+              <div class="panel-tool-content">
+                <div class="panel-tool-head">
+                  <div class="panel-tool-icon panel-tool-icon-bpm" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <use href="#icon-bpm"></use>
+                    </svg>
+                  </div>
+                  <h3><a class="panel-tool-title" href="https://bpm.marketlearn.online" target="_blank" rel="noopener">Brand Position Mapper</a></h3>
+                </div>
+                <p class="panel-copy">Compare a brand's stated position with likely customer associations, competitor territory, and strategic whitespace.</p>
+              </div>
+            </div>
+          </div>
         </aside>
+      </div>
+    </section>
+
+    <section id="tools">
+      <div class="shell section-card">
+        <div class="section-head">
+          <div class="section-label">The toolkit</div>
+          <h2>A growing suite of AI tools for brand and marketing work</h2>
+          <p class="section-copy">
+            Consumer Based Brand Equity (CBBE) Analyzer and Brand Position Mapper lead the toolkit today, with additional tools planned to support other kinds of brand and strategy analysis as the platform expands.
+          </p>
+        </div>
+
+        <div class="tool-grid">
+          <article class="tool-card tool-card-live">
+            <div class="tool-card-head">
+              <div class="tool-card-icon tool-card-icon-cbbe" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <use href="#icon-cbbe"></use>
+                </svg>
+              </div>
+              <div class="tool-card-heading">
+                <h3>Consumer Based Brand Equity (CBBE) Analyzer</h3>
+              </div>
+            </div>
+            <p class="tool-copy">Evaluate brand equity with structured explanations, score drivers, visual outputs, and evidence-oriented references.</p>
+            <a class="tool-link" href="https://bpm.marketlearn.online" target="_blank" rel="noopener">Open tool</a>
+          </article>
+          <article class="tool-card tool-card-live">
+            <div class="tool-card-head">
+              <div class="tool-card-icon tool-card-icon-bpm" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <use href="#icon-bpm"></use>
+                </svg>
+              </div>
+              <div class="tool-card-heading">
+                <h3>Brand Position Mapper</h3>
+              </div>
+            </div>
+            <p class="tool-copy">Compare a brand's claimed position against likely customer associations, competitors, and strategic whitespace.</p>
+            <a class="tool-link" href="https://cbbe.marketlearn.online" target="_blank" rel="noopener">Open tool</a>
+          </article>
+          <article class="tool-card">
+            <div class="tool-status tool-status-soon">Coming soon</div>
+            <div class="tool-card-head">
+              <div class="tool-card-icon tool-card-icon-marketlearn" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <use href="#icon-marketlearn"></use>
+                </svg>
+              </div>
+              <div class="tool-card-heading">
+                <h3>Brand Architecture Visualizer</h3>
+              </div>
+            </div>
+            <p class="tool-copy">Map relationships between master brands, sub-brands, endorsed brands, and product lines in a clearer strategic format.</p>
+            <span class="tool-link tool-link-disabled">Coming soon</span>
+          </article>
+          <article class="tool-card">
+            <div class="tool-status tool-status-soon">Coming soon</div>
+            <div class="tool-card-head">
+              <div class="tool-card-icon tool-card-icon-marketlearn" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <use href="#icon-marketlearn"></use>
+                </svg>
+              </div>
+              <div class="tool-card-heading">
+                <h3>Brand Elements Analyzer</h3>
+              </div>
+            </div>
+            <p class="tool-copy">Review names, logos, taglines, packaging, and other brand assets with a more structured marketing lens.</p>
+            <span class="tool-link tool-link-disabled">Coming soon</span>
+          </article>
+        </div>
       </div>
     </section>
 
     <section>
       <div class="shell section-card">
         <div class="section-head">
-          <div class="section-label">Start here</div>
-          <h2>Begin with the CBBE Analyzer</h2>
+          <div class="section-label">Features and advantages</div>
+          <h2>Focused tools for sharper brand diagnosis</h2>
           <p class="section-copy">
-            MarketLearn currently leads with one flagship tool: a CBBE analysis experience designed to help business students interpret brand equity using Keller's framework, supported by clear explanations and usable evidence.
+            MarketLearn begins with two live tools that help students and managers move from description to diagnosis. One evaluates the drivers of brand equity using Keller's framework, while the other tests whether a brand's intended positioning aligns with likely consumer associations.
           </p>
         </div>
 
         <div class="featured-grid">
           <div class="feature-box">
-            <h3>What students get from CBBE</h3>
+            <h3>How to utilize the toolkit</h3>
             <p class="section-copy">
-              Instead of a generic answer, the tool produces structured brand analysis with clearer score reasoning, references for academic work, and outputs that can support coursework, presentations, and case discussions.
+              Our interactive tools deliver structured brand analysis with transparent reasoning, meaningful comparisons, and practical outputs for coursework, presentations, case discussions, and managerial decision-making.
             </p>
             <ul class="feature-list">
-              <li>Analyze all six levels of Keller's CBBE model with explained score drivers.</li>
+              <li>Analyze all aspects of Keller's brand equity model, with clear explanations of the factors driving each score, to identify where brand equity is strong and where it may be vulnerable.</li>
+              <li>Compare stated brand positioning against likely customer perceptions, competitors, and find gaps in the market.</li>
               <li>Use visual outputs to support presentations, tutorials, and class discussion.</li>
-              <li>Pull references into reports so the work feels grounded rather than invented.</li>
+              <li>Integrate verified, linked references into reports and proposals to support stronger analysis and more credible recommendations.</li>
             </ul>
             <div class="cta-row">
-              <a class="button button-primary" href="https://cbbe.marketlearn.online" target="_blank" rel="noopener">Open CBBE Analyzer</a>
+              <a class="button button-primary" href="#tools">Go to toolkit</a>
             </div>
           </div>
 
           <div class="feature-side">
             <div class="section-label">What makes it different</div>
             <p class="section-copy">
-              MarketLearn is not positioned as ordinary AI output. Its purpose is to help students produce more evidence-aware, framework-based marketing analysis.
+              MarketLearn helps students and managers produce evidence-based, framework-driven marketing analysis — not generic AI-generated content.
             </p>
             <div class="stats-row">
               <div class="stat">
@@ -620,12 +908,12 @@
                 <span>free analysis to begin exploring the tool</span>
               </div>
               <div class="stat">
-                <strong>6</strong>
-                <span>CBBE dimensions interpreted in a structured way</span>
+                <strong>2</strong>
+                <span>interactive tools now available in the growing toolkit</span>
               </div>
               <div class="stat">
-                <strong>1</strong>
-                <span>shared platform vision for future tools and credits</span>
+                <strong>3+</strong>
+                <span>linked and verified references included in each output</span>
               </div>
             </div>
           </div>
@@ -663,45 +951,6 @@
       </div>
     </section>
 
-    <section id="tools">
-      <div class="shell section-card">
-        <div class="section-head">
-          <div class="section-label">The toolkit</div>
-          <h2>A growing suite of AI tools for brand and marketing work</h2>
-          <p class="section-copy">
-            CBBE is the lead live tool today. The broader MarketLearn suite is intended to support different kinds of brand and strategy analysis as the platform expands.
-          </p>
-        </div>
-
-        <div class="tool-grid">
-          <article class="tool-card">
-            <div class="tool-status tool-status-live">Live now</div>
-            <h3>CBBE Analyzer</h3>
-            <p class="tool-copy">Evaluate brand equity with structured explanations, score drivers, visual outputs, and evidence-oriented references.</p>
-            <a class="tool-link" href="https://cbbe.marketlearn.online" target="_blank" rel="noopener">Launch tool</a>
-          </article>
-          <article class="tool-card">
-            <div class="tool-status tool-status-soon">Coming soon</div>
-            <h3>Brand Architecture Visualizer</h3>
-            <p class="tool-copy">Map relationships between master brands, sub-brands, endorsed brands, and product lines in a clearer strategic format.</p>
-            <span class="tool-link tool-link-disabled">Coming soon</span>
-          </article>
-          <article class="tool-card">
-            <div class="tool-status tool-status-soon">Coming soon</div>
-            <h3>Brand Elements Analyzer</h3>
-            <p class="tool-copy">Review names, logos, taglines, packaging, and other brand assets with a more structured marketing lens.</p>
-            <span class="tool-link tool-link-disabled">Coming soon</span>
-          </article>
-          <article class="tool-card">
-            <div class="tool-status tool-status-soon">Coming soon</div>
-            <h3>Brand Position Mapper</h3>
-            <p class="tool-copy">Compare a brand's claimed position against likely customer associations, competitors, and strategic whitespace.</p>
-            <span class="tool-link tool-link-disabled">Coming soon</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section id="pricing">
       <div class="shell section-card">
         <div class="section-head">
@@ -715,7 +964,7 @@
             </p>
           </div>
           <div class="cta-row">
-            <a class="button button-primary" href="https://cbbe.marketlearn.online" target="_blank" rel="noopener">Try CBBE</a>
+            <a class="button button-primary" href="#tools">See available tools</a>
           </div>
         </div>
       </div>
@@ -741,12 +990,7 @@
 
   <footer class="footer">
     <div class="shell footer-inner">
-      <p class="footer-copy">MarketLearn is an evolving AI toolkit for business students, starting with evidence-based brand analysis.</p>
-      <div class="footer-links">
-        <a href="#tools">Tools</a>
-        <a href="#pricing">Access</a>
-        <a href="https://cbbe.marketlearn.online" target="_blank" rel="noopener">Try CBBE</a>
-      </div>
+      <p class="footer-copy">&copy; 2026 MarketLearn. AI-assisted content — verify before implementation.</p>
       <p class="footer-contact">Contact: <a href="mailto:marketlearn.online@gmail.com">marketlearn.online@gmail.com</a></p>
     </div>
   </footer>
