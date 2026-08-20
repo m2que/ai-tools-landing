@@ -146,16 +146,6 @@
       font-weight: 700;
     }
 
-    .hero {
-      padding: 72px 0 56px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-
-    .hero-copy,
     .section-card,
     .tool-card,
     .workflow-card,
@@ -164,10 +154,6 @@
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-    }
-
-    .hero-copy {
-      padding: 48px;
     }
 
     .eyebrow {
@@ -341,64 +327,12 @@
       gap: 20px;
     }
 
-    .featured-grid {
-      grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
-      align-items: start;
-    }
-
-    .feature-box,
-    .feature-side {
-      padding: 28px;
-      border-radius: 20px;
-      border: 1px solid var(--line);
-      background: var(--surface-strong);
-    }
-
     .feature-box h3,
     .tool-card h3,
     .workflow-card h3,
     .trust-card h3 {
       font-size: 1.55rem;
       margin-bottom: 12px;
-    }
-
-    .feature-list {
-      margin: 18px 0 0;
-      padding-left: 18px;
-      font-family: Arial, sans-serif;
-      color: var(--ink);
-      line-height: 1.8;
-    }
-
-    .feature-side {
-      display: grid;
-      gap: 16px;
-      background: linear-gradient(180deg, rgba(15, 118, 110, 0.06), rgba(217, 119, 6, 0.05));
-    }
-
-    .stats-row {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .stat {
-      padding: 18px 16px;
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.72);
-      border: 1px solid rgba(15, 118, 110, 0.08);
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 1.3rem;
-      margin-bottom: 4px;
-    }
-
-    .stat span {
-      font-family: Arial, sans-serif;
-      color: var(--muted);
-      font-size: 0.88rem;
     }
 
     .tool-grid {
@@ -588,15 +522,10 @@
 
     @media (max-width: 980px) {
       .hero-grid,
-      .featured-grid,
       .pricing-box,
       .tool-grid,
       .workflow-grid,
       .trust-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .stats-row {
         grid-template-columns: 1fr;
       }
 
@@ -668,29 +597,13 @@
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div class="shell hero-grid">
-        <div class="hero-copy">
-          <div class="eyebrow">Built for business students</div>
-          <h1>Evidence-based tools for targeted market analyses</h1>
-          <p class="hero-lead">
-            <strong>MarketLearn is an evidence-based AI toolkit for business insights.</strong>
-            It helps you analyze businesses and markets faster, structure strategy more clearly, and build stronger arguments for reports and proposals with evidence based on verified references and established frameworks. Each output includes verified links to market reports, academic research, and business news you can use as supporting evidence in coursework, reports, presentations, and strategy discussions.
-          </p>
-          <div class="cta-row">
-            <a class="button button-secondary" href="#tools">Explore the Toolkit</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="tools">
       <div class="shell section-card">
         <div class="section-head">
           <div class="section-label">The toolkit</div>
           <h2>AI tools for smarter marketing decisions</h2>
           <p class="section-copy">
-            Consumer Based Brand Equity (CBBE) Analyzer, Brand Position Mapper, and Brand Element Analyzer are live today, with additional tools planned to support associative memory, brand valuation, and broader strategy analysis as the platform expands.
+            Each output includes links to market reports, academic research, and business news.
           </p>
         </div>
 
@@ -783,64 +696,13 @@
       </div>
     </section>
 
-    <section>
-      <div class="shell section-card">
-        <div class="section-head">
-          <div class="section-label">Features</div>
-          <h2>Focused tools for precise diagnostics</h2>
-          <p class="section-copy">
-            MarketLearn tools help you move from description to diagnosis. One evaluates the drivers of brand equity using Keller's framework, another tests whether a brand's intended positioning aligns with likely consumer associations, and BEA analyzes logos, colors, typography, and other brand identity cues.
-          </p>
-        </div>
-
-        <div class="featured-grid">
-          <div class="feature-box">
-            <h3>How to utilize the toolkit</h3>
-            <p class="section-copy">
-               Our interactive tools deliver structured analyses with transparent reasoning, meaningful comparisons, and practical outputs for coursework, presentations, case discussions, and managerial decision-making.
-            </p>
-            <ul class="feature-list">
-              <li>Analyze all aspects of Keller's brand equity model, with clear explanations of the factors driving each score, to identify where brand equity is strong and where it may be vulnerable.</li>
-              <li>Compare stated brand positioning against likely customer perceptions, competitors, and find gaps in the market.</li>
-              <li>Use visual outputs to support presentations, tutorials, and class discussion.</li>
-              <li>Integrate verified, linked references into reports and proposals to support stronger analysis and more credible recommendations.</li>
-            </ul>
-            <div class="cta-row">
-              <a class="button button-primary" href="#tools">Go to toolkit</a>
-            </div>
-          </div>
-
-          <div class="feature-side">
-            <div class="section-label">What makes it different</div>
-            <p class="section-copy">
-              MarketLearn helps students and managers produce evidence-based, framework-driven marketing analysis — not generic AI-generated content.
-            </p>
-            <div class="stats-row">
-              <div class="stat">
-                <strong>1st</strong>
-                <span>free analysis to begin exploring the tool</span>
-              </div>
-              <div class="stat">
-                <strong>3</strong>
-                <span>interactive tools now available in the growing toolkit</span>
-              </div>
-              <div class="stat">
-                <strong>3+</strong>
-                <span>linked and verified references included in each output</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="coursework">
       <div class="shell section-card">
         <div class="section-head">
           <div class="section-label">Built for learning and decision-making</div>
-          <h2>How students and managers use MarketLearn</h2>
+          <h2>How to use MarketLearn</h2>
           <p class="section-copy">
-            MarketLearn helps students and managers turn raw brand information into structured strategic analysis that supports stronger coursework, reports, presentations, and business decisions.
+            Each MarketLearn tool provides a specific instant analysis of a businesses or market complete with evidence for reports and proposals.
           </p>
         </div>
 
@@ -883,22 +745,6 @@
       </div>
     </section>
 
-    <section>
-      <div class="shell trust-grid">
-        <article class="trust-card">
-          <h3>Evidence-aware outputs</h3>
-          <p class="workflow-copy">The ambition is to help students work with references, frameworks, and structured logic rather than rely on unsupported generic output.</p>
-        </article>
-        <article class="trust-card">
-          <h3>Academic usefulness</h3>
-          <p class="workflow-copy">MarketLearn is intended to support case work, coursework drafts, revision, and presentation preparation in business education contexts.</p>
-        </article>
-        <article class="trust-card">
-          <h3>Critical use still matters</h3>
-          <p class="workflow-copy">Students should still evaluate outputs critically, cross-check evidence, and develop their own interpretation in academic work.</p>
-        </article>
-      </div>
-    </section>
   </main>
 
   <footer class="footer">
