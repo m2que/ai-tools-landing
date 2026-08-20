@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <metadata>
+    palette.bg=#f5efe6; palette.surface=#fbf6ee; palette.ink=#1d2430; palette.muted=#5f6b7a; palette.line=rgba(31,52,89,0.14); palette.accent=#c39a5b; palette.accent-strong=#1f4b8f; palette.warm=#e0bb7a; shading=none; fading=none
+  </metadata>
   <symbol id="icon-marketlearn" viewBox="0 0 24 24">
     <path d="M12 20V10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M18 20V4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
