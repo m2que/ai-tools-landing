@@ -11,165 +11,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/brand.css" />
   <style>
-    :root {
-      --bg: #f5efe6;
-      --surface: #fcf8f2;
-      --surface-strong: #fbf6ee;
-      --ink: #1d2430;
-      --muted: #5f6b7a;
-      --line: #d6d2cb;
-      --accent: #c39a5b;
-      --accent-strong: #1f4b8f;
-      --warm: #e0bb7a;
-      --navy-deep: #183159;
-      --paper: #fffaf2;
-      --shadow: none;
-      --radius: 8px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: "Source Sans 3", Georgia, serif;
-      color: var(--ink);
-      background: var(--bg);
-      letter-spacing: 0.01em;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .shell {
-      width: min(1180px, calc(100% - 32px));
-      margin: 0 auto;
-    }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: var(--surface-strong);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .topbar-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      padding: 18px 0;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .brand-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      color: var(--accent-strong);
-      background: var(--surface-strong);
-      border: 1px solid var(--line);
-    }
-
-    .brand-icon svg {
-      width: 24px;
-      height: 24px;
-      stroke: currentColor;
-      stroke-width: 2;
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .brand-copy {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-
-    .brand-mark,
-    h1,
-    h2,
-    h3 {
-      margin: 0;
-      line-height: 1.02;
-      font-family: "Cormorant Garamond", Georgia, serif;
-      font-weight: 600;
-      letter-spacing: 0.01em;
-    }
-
-    .brand-mark {
-      font-size: 1.9rem;
-    }
-
-    .brand-sub,
-    .eyebrow,
-    .token-label,
-    .usage-label,
-    .icon-name,
-    .icon-code {
-      font-family: "Source Sans 3", Arial, sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-    }
-
-    .brand-sub {
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      font-family: "Source Sans 3", Arial, sans-serif;
-      font-size: 0.92rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .nav a:hover {
-      color: var(--accent-strong);
-    }
-
     main {
       padding: 28px 0 60px;
-    }
-
-    .hero,
-    .section-card {
-      position: relative;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .hero::before,
-    .section-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent-strong) 0%, var(--accent) 55%, var(--warm) 100%);
     }
 
     .hero {
@@ -187,31 +32,8 @@
       gap: 16px;
     }
 
-    .eyebrow {
-      display: inline-flex;
-      width: fit-content;
-      padding: 7px 12px;
-      border-radius: 999px;
-      font-size: 0.72rem;
-      font-weight: 600;
-      background: var(--surface-strong);
-      color: var(--accent-strong);
-      border: 1px solid var(--line);
-    }
-
     h1 {
       font-size: clamp(2.5rem, 5vw, 4.2rem);
-    }
-
-    .lead,
-    .section-copy,
-    .usage-copy,
-    .spec-list {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.7;
-      font-size: 1.02rem;
-      font-family: "Source Sans 3", Arial, sans-serif;
     }
 
     .hero-panel {
@@ -242,7 +64,6 @@
 
     .section-card {
       padding: 38px;
-      background: var(--surface);
       margin-bottom: 22px;
     }
 
@@ -271,10 +92,7 @@
     .color-card,
     .icon-card,
     .usage-card {
-      border-radius: 6px;
-      border: 1px solid var(--line);
       background: var(--paper);
-      overflow: hidden;
     }
 
     .swatch {
@@ -293,6 +111,7 @@
       font-size: 0.7rem;
       font-weight: 700;
       color: var(--muted);
+      letter-spacing: 0.14em;
     }
 
     .token-name,
@@ -326,8 +145,6 @@
       min-height: 160px;
       margin-bottom: 16px;
       border-radius: 6px;
-      background: var(--surface-strong);
-      border: 1px solid var(--line);
       color: var(--accent-strong);
     }
 
@@ -356,6 +173,7 @@
       margin-top: 6px;
       font-size: 0.7rem;
       color: var(--accent-strong);
+      letter-spacing: 0.14em;
     }
 
     .spec-list {
@@ -382,9 +200,6 @@
     }
 
     .footer-copy {
-      margin: 0;
-      color: var(--muted);
-      font-family: "Source Sans 3", Arial, sans-serif;
       text-align: center;
     }
 
@@ -482,7 +297,7 @@
           </div>
           <div class="panel-box">
             <h2>Primary asset file</h2>
-            <p>Shared icon definitions live in <code>assets/marketlearn-icons.svg</code> and the core palette aligns with the CSS variables used on the main landing page.</p>
+            <p>Shared icon definitions live in <code>assets/marketlearn-icons.svg</code> and reusable visual styling lives in <code>assets/brand.css</code>.</p>
           </div>
         </div>
       </section>
@@ -634,9 +449,9 @@
           <h2>Current file references</h2>
         </div>
         <ul class="spec-list">
-          <li>Color variables currently originate from `index.html`.</li>
+          <li>Reusable color and UI tokens live in `assets/brand.css`.</li>
           <li>Shared icon symbols are stored in `assets/marketlearn-icons.svg`.</li>
-          <li>This page mirrors the current live icon paths so the visual reference stays aligned with the working set.</li>
+          <li>This page is the reference, while `assets/brand.css` and `assets/marketlearn-icons.svg` are the files to copy into other projects.</li>
         </ul>
       </section>
     </div>
