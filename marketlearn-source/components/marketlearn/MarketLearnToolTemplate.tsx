@@ -10,6 +10,10 @@ const SearchIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 );
 
 const TemplateGuidePage: React.FC = () => {
+  React.useEffect(() => {
+    document.title = 'MarketLearn Tool Template';
+  }, []);
+
   return (
     <div className="template-guide-page">
       <header className="template-guide-topbar">

@@ -19,6 +19,7 @@
     gtag('js', new Date());
     gtag('config', 'G-SKN1Y8ZPF1');
   </script>
+  <script src="assets/load-icons.js"></script>
   <style>
     .nav-cta {
       background: var(--accent);
@@ -81,6 +82,8 @@
 
     #tools .section-copy {
       color: #c7d2fe;
+      font-size: 1.05rem;
+      font-weight: 600;
     }
 
     #tools .tool-card {
@@ -113,6 +116,11 @@
 
     #coursework .section-head h2 {
       font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+    }
+
+    #tools .section-head h2 {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      letter-spacing: -0.03em;
     }
 
     #pricing .section-head h2 {
@@ -287,35 +295,17 @@
   </style>
 </head>
 <body>
-  <svg xmlns="http://www.w3.org/2000/svg" style="display: none" aria-hidden="true">
-    <symbol id="icon-marketlearn" viewBox="0 0 24 24">
-      <path d="M12 20V10"></path>
-      <path d="M18 20V4"></path>
-      <path d="M6 20v-4"></path>
-    </symbol>
-    <symbol id="icon-cbbe" viewBox="0 0 24 24">
-      <path d="M2.5 16.88a1 1 0 0 1-.32-1.43l9-13.02a1 1 0 0 1 1.64 0l9 13.01a1 1 0 0 1-.32 1.44l-8.51 4.86a2 2 0 0 1-1.98 0Z"></path>
-      <path d="M12 2v20"></path>
-    </symbol>
-    <symbol id="icon-bpm" viewBox="0 0 24 24">
-      <path d="M12 23V1"></path>
-      <path d="M1 12h22"></path>
-    </symbol>
-    <symbol id="icon-bea" viewBox="0 0 24 24">
-      <path d="M12 0.6c1.18 2.92 2.92 5.05 4.7 7.22 1.82 2.22 3.68 4.5 3.68 7.34A8 8 0 0 1 12 23a8 8 0 0 1-8-7.84c0-2.84 1.86-5.12 3.68-7.34C9.08 5.65 10.82 3.52 12 0.6Z"></path>
-    </symbol>
-  </svg>
   <header class="topbar">
     <div class="shell topbar-inner">
       <a class="brand" href="#top">
         <span class="brand-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24">
+          <svg class="brand-icon-marketlearn" viewBox="0 0 24 24">
             <use href="#icon-marketlearn"></use>
           </svg>
         </span>
         <span class="brand-copy">
           <span class="brand-mark">MarketLearn</span>
-          <span class="brand-sub">Evidence-based AI for business intelligence</span>
+          <span class="brand-sub">AI for business intelligence</span>
         </span>
       </a>
       <nav class="nav">
@@ -331,9 +321,9 @@
       <div class="shell section-card">
         <div class="section-head">
           <div class="section-label">The toolkit</div>
-          <h2>AI tools for smarter marketing decisions</h2>
+          <h2>AI-Powered Analysis Grounded in Real Evidence</h2>
           <p class="section-copy">
-            Each output includes links to market reports, academic research, and business news.
+            More than AI summaries - analyses include valid sources, including market reports, peer-reviewed literature, and business publications.
           </p>
         </div>
 

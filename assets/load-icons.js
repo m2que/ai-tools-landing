@@ -1,0 +1,47 @@
+(() => {
+  const spritePath = 'assets/marketlearn-icons.svg';
+
+  const injectFallbackIcons = () => {
+    const fallback = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    fallback.setAttribute('aria-hidden', 'true');
+    fallback.style.display = 'none';
+    fallback.innerHTML = `
+      <symbol id="icon-marketlearn" viewBox="0 0 24 24">
+        <path d="M12 20V10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M18 20V4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M6 20v-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </symbol>
+      <symbol id="icon-cbbe" viewBox="0 0 24 24">
+        <path d="M2.5 16.88a1 1 0 0 1-.32-1.43l9-13.02a1 1 0 0 1 1.64 0l9 13.01a1 1 0 0 1-.32 1.44l-8.51 4.86a2 2 0 0 1-1.98 0Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M12 2v20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+      </symbol>
+      <symbol id="icon-bpm" viewBox="0 0 24 24">
+        <path d="M12 23V1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M1 12h22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+      </symbol>
+      <symbol id="icon-bea" viewBox="0 0 24 24">
+        <path d="M12 0.6c1.18 2.92 2.92 5.05 4.7 7.22 1.82 2.22 3.68 4.5 3.68 7.34A8 8 0 0 1 12 23a8 8 0 0 1-8-7.84c0-2.84 1.86-5.12 3.68-7.34C9.08 5.65 10.82 3.52 12 0.6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+      </symbol>
+    `;
+    document.body.insertBefore(fallback, document.body.firstChild);
+  };
+
+  fetch(spritePath)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Failed to load icon sprite: ${response.status}`);
+      }
+      return response.text();
+    })
+    .then((svgText) => {
+      const wrapper = document.createElement('div');
+      wrapper.setAttribute('aria-hidden', 'true');
+      wrapper.style.display = 'none';
+      wrapper.innerHTML = svgText;
+      document.body.insertBefore(wrapper, document.body.firstChild);
+    })
+    .catch((error) => {
+      console.error(error);
+      injectFallbackIcons();
+    });
+})();

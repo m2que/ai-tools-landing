@@ -121,10 +121,10 @@ code {
 .brand-icon {
   width: 42px;
   height: 42px;
-  border-radius: 14px;
-  background: var(--accent);
-  color: #ffffff;
-  box-shadow: 0 8px 18px rgba(79, 70, 229, 0.14);
+  border-radius: 16px;
+  background: var(--surface-muted);
+  color: var(--accent);
+  box-shadow: var(--shadow-sm);
 }
 
 .tool-card-icon {
@@ -137,6 +137,11 @@ code {
   width: 22px;
   height: 22px;
   stroke-width: 2;
+}
+
+.brand-icon .brand-icon-marketlearn {
+  width: 22px;
+  height: 22px;
 }
 
 .tool-card-icon svg {
