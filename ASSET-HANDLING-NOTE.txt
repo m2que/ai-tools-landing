@@ -1,0 +1,10 @@
+Reference asset handling rule:
+
+Do not modify reference asset files unless the user explicitly requests a specific change.
+
+This applies to files such as:
+- brand-assets.html
+- shared icon assets
+- brand reference/source-of-truth files
+
+Do not clean up, reinterpret, merge, split, rename, modernize, or otherwise adjust these files without explicit user direction.
