@@ -10,7 +10,7 @@
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/brand.css" />
   <style>
     main {
@@ -19,10 +19,10 @@
 
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
-      gap: 28px;
-      padding: 42px;
-      background: var(--surface-strong);
+      grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+      gap: 24px;
+      padding: 32px;
+      background: var(--surface);
       margin-bottom: 22px;
     }
 
@@ -33,7 +33,9 @@
     }
 
     h1 {
-      font-size: clamp(2.5rem, 5vw, 4.2rem);
+      font-size: clamp(2.4rem, 6vw, 4.8rem);
+      line-height: 0.96;
+      max-width: 12ch;
     }
 
     .hero-panel {
@@ -43,27 +45,26 @@
     }
 
     .panel-box {
-      padding: 22px;
-      border-radius: 6px;
-      background: var(--navy-deep);
-      color: #f7f0e4;
-      border: 1px solid #2d466f;
+      padding: 20px;
+      border-radius: var(--radius-sm);
+      background: var(--surface-subtle);
+      color: var(--ink);
+      border: 1px solid var(--line);
     }
 
     .panel-box h2 {
-      font-size: 1.8rem;
+      font-size: 1.35rem;
       margin-bottom: 10px;
     }
 
     .panel-box p {
       margin: 0;
-      color: #f7f0e4;
+      color: var(--muted);
       line-height: 1.7;
-      font-family: "Source Sans 3", Arial, sans-serif;
     }
 
     .section-card {
-      padding: 38px;
+      padding: 28px;
       margin-bottom: 22px;
     }
 
@@ -92,7 +93,7 @@
     .color-card,
     .icon-card,
     .usage-card {
-      background: var(--paper);
+      background: var(--surface-subtle);
     }
 
     .swatch {
@@ -108,26 +109,25 @@
     .token-label,
     .icon-name,
     .usage-label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      color: var(--muted);
-      letter-spacing: 0.14em;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #64748b;
+      letter-spacing: 0.16em;
     }
 
     .token-name,
     .usage-title {
       margin: 8px 0 6px;
-      font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: 1.55rem;
+      font-size: 1.15rem;
       color: var(--ink);
     }
 
     .token-value {
       margin: 10px 0 0;
-      font-family: "Source Sans 3", Arial, sans-serif;
-      font-size: 0.92rem;
-      color: var(--accent-strong);
-      letter-spacing: 0.04em;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #4338ca;
+      letter-spacing: 0.02em;
     }
 
     .icon-grid {
@@ -135,7 +135,7 @@
     }
 
     .icon-card {
-      padding: 22px;
+      padding: 0;
       text-align: center;
     }
 
@@ -143,9 +143,11 @@
       display: grid;
       place-items: center;
       min-height: 160px;
-      margin-bottom: 16px;
-      border-radius: 6px;
-      color: var(--accent-strong);
+      margin-bottom: 0;
+      border-radius: 0;
+      color: var(--accent);
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
     }
 
     .icon-stage svg {
@@ -171,9 +173,9 @@
 
     .icon-code {
       margin-top: 6px;
-      font-size: 0.7rem;
-      color: var(--accent-strong);
-      letter-spacing: 0.14em;
+      font-size: 0.8rem;
+      color: #4338ca;
+      letter-spacing: 0.02em;
     }
 
     .spec-list {
@@ -192,7 +194,7 @@
     }
 
     .usage-title {
-      font-size: 1.6rem;
+      font-size: 1.15rem;
     }
 
     .footer {
@@ -228,7 +230,7 @@
 
       .hero,
       .section-card {
-        padding: 26px;
+        padding: 22px;
       }
 
       .palette-grid,
@@ -293,11 +295,11 @@
         <div class="hero-panel">
           <div class="panel-box">
             <h2>Current system</h2>
-            <p>Warm academic neutrals, a deep strategic blue, and clean outline icons sized to feel generous without adding decorative detail.</p>
+            <p>Cool neutrals, indigo-led emphasis, and clean outline icons presented inside structured interface panels.</p>
           </div>
           <div class="panel-box">
             <h2>Primary asset file</h2>
-            <p>Shared icon definitions live in <code>assets/marketlearn-icons.svg</code> and reusable visual styling lives in <code>assets/brand.css</code>.</p>
+            <p>Shared icon definitions live in <code>assets/marketlearn-icons.svg</code> and reusable landing-page styling lives in <code>assets/brand.css</code>.</p>
           </div>
         </div>
       </section>
@@ -306,61 +308,61 @@
         <div class="section-head">
           <div class="eyebrow">Color Palette</div>
           <h2>Core brand colors</h2>
-          <p class="section-copy">These tokens reflect the current live palette used by the landing page and supporting icon asset metadata.</p>
+          <p class="section-copy">These tokens adapt the landing page to the ANMM-aligned MarketLearn system defined in <code>marketlearn-source</code>.</p>
         </div>
         <div class="palette-grid">
           <article class="color-card">
-            <div class="swatch" style="background:#f5efe6"></div>
+            <div class="swatch" style="background:#f8fafc"></div>
             <div class="color-body">
-              <div class="token-label">Background</div>
-              <h3 class="token-name">Warm Canvas</h3>
-              <p class="section-copy">Base page tone for calm, paper-like surfaces.</p>
-              <p class="token-value">`--bg` / `#f5efe6`</p>
+              <div class="token-label">Foundation</div>
+              <h3 class="token-name">Slate Mist</h3>
+              <p class="section-copy">Primary page canvas inherited from the newer MarketLearn system.</p>
+              <p class="token-value">`--bg` / `#f8fafc`</p>
             </div>
           </article>
           <article class="color-card">
-            <div class="swatch" style="background:#fbf6ee"></div>
+            <div class="swatch" style="background:#ffffff"></div>
             <div class="color-body">
               <div class="token-label">Surface</div>
-              <h3 class="token-name">Soft Ivory</h3>
-              <p class="section-copy">Primary card and panel surface for readable content blocks.</p>
-              <p class="token-value">`--surface-strong` / `#fbf6ee`</p>
+              <h3 class="token-name">Signal White</h3>
+              <p class="section-copy">Primary card and panel surface for modular interface sections.</p>
+              <p class="token-value">`--surface` / `#ffffff`</p>
             </div>
           </article>
           <article class="color-card">
-            <div class="swatch" style="background:#1d2430"></div>
-            <div class="color-body">
-              <div class="token-label">Ink</div>
-              <h3 class="token-name">Archive Ink</h3>
-              <p class="section-copy">Primary text color for headings and interface emphasis.</p>
-              <p class="token-value">`--ink` / `#1d2430`</p>
-            </div>
-          </article>
-          <article class="color-card">
-            <div class="swatch" style="background:#5f6b7a"></div>
-            <div class="color-body">
-              <div class="token-label">Muted</div>
-              <h3 class="token-name">Slate Note</h3>
-              <p class="section-copy">Secondary body copy and supporting interface text.</p>
-              <p class="token-value">`--muted` / `#5f6b7a`</p>
-            </div>
-          </article>
-          <article class="color-card">
-            <div class="swatch" style="background:#c39a5b"></div>
-            <div class="color-body">
-              <div class="token-label">Accent</div>
-              <h3 class="token-name">Brass Gold</h3>
-              <p class="section-copy">Warm accent used in trims, highlights, and supporting emphasis.</p>
-              <p class="token-value">`--accent` / `#c39a5b`</p>
-            </div>
-          </article>
-          <article class="color-card">
-            <div class="swatch" style="background:#1f4b8f"></div>
+            <div class="swatch" style="background:#4f46e5"></div>
             <div class="color-body">
               <div class="token-label">Primary Accent</div>
-              <h3 class="token-name">Strategic Blue</h3>
-              <p class="section-copy">Primary action color for buttons, icons, and interactive emphasis.</p>
-              <p class="token-value">`--accent-strong` / `#1f4b8f`</p>
+              <h3 class="token-name">ANMM Indigo</h3>
+              <p class="section-copy">Anchor color for action states, icon framing, and interface emphasis.</p>
+              <p class="token-value">`--accent` / `#4f46e5`</p>
+            </div>
+          </article>
+          <article class="color-card">
+            <div class="swatch" style="background:#0d9488"></div>
+            <div class="color-body">
+              <div class="token-label">Secondary Accent</div>
+              <h3 class="token-name">ANMM Teal</h3>
+              <p class="section-copy">Secondary system accent used for supporting emphasis and contrast.</p>
+              <p class="token-value">`--accent-2` / `#0d9488`</p>
+            </div>
+          </article>
+          <article class="color-card">
+            <div class="swatch" style="background:#10b981"></div>
+            <div class="color-body">
+              <div class="token-label">Support Accent</div>
+              <h3 class="token-name">ANMM Emerald</h3>
+              <p class="section-copy">Positive support signal used in the broader MarketLearn palette.</p>
+              <p class="token-value">`--accent-3` / `#10b981`</p>
+            </div>
+          </article>
+          <article class="color-card">
+            <div class="swatch" style="background:linear-gradient(90deg,#f59e0b 0%,#8b5cf6 50%,#ef4444 100%)"></div>
+            <div class="color-body">
+              <div class="token-label">Highlight Range</div>
+              <h3 class="token-name">Amber, Purple, Red</h3>
+              <p class="section-copy">High-visibility supporting accents carried over from the ANMM-aligned system.</p>
+              <p class="token-value">`#f59e0b` / `#8b5cf6` / `#ef4444`</p>
             </div>
           </article>
         </div>
@@ -370,7 +372,7 @@
         <div class="section-head">
           <div class="eyebrow">Icon Set</div>
           <h2>Shared product icons</h2>
-          <p class="section-copy">All icons follow a clean outline style with rounded caps and joins, designed to sit comfortably inside circular or open layouts.</p>
+          <p class="section-copy">Icon geometry stays the same, but presentation shifts to indigo-led tiles, sharper containers, and ANMM-style interface framing.</p>
         </div>
         <div class="icon-grid">
           <article class="icon-card">
@@ -416,28 +418,28 @@
         <div class="section-head">
           <div class="eyebrow">Usage Guidance</div>
           <h2>How the system should stay consistent</h2>
-          <p class="section-copy">This is a practical working guide for keeping the current MarketLearn look recognizable as more pages and tools are added.</p>
+          <p class="section-copy">This is a practical guide for keeping the new MarketLearn direction consistent across static landing-page assets.</p>
         </div>
         <div class="usage-grid">
           <article class="usage-card">
             <div class="usage-body">
               <div class="usage-label">Typography</div>
-              <h3 class="usage-title">Editorial + practical</h3>
-              <p class="usage-copy">Use Cormorant Garamond for high-level headings and Source Sans 3 for interface text, labels, and paragraphs.</p>
+              <h3 class="usage-title">Direct, academic, modern</h3>
+              <p class="usage-copy">Use Inter throughout, with dense weights, compact tracking, and short high-signal headings.</p>
             </div>
           </article>
           <article class="usage-card">
             <div class="usage-body">
               <div class="usage-label">Color Balance</div>
-              <h3 class="usage-title">Warm neutrals first</h3>
-              <p class="usage-copy">Lead with warm paper tones, reserve Strategic Blue for calls to action and icon strokes, and use Brass Gold as a secondary supporting accent.</p>
+              <h3 class="usage-title">Cool neutrals first</h3>
+              <p class="usage-copy">Lead with white and slate surfaces, reserve indigo for anchor actions, and use the wider accent set as controlled support.</p>
             </div>
           </article>
           <article class="usage-card">
             <div class="usage-body">
               <div class="usage-label">Icon Style</div>
               <h3 class="usage-title">Single-outline forms</h3>
-              <p class="usage-copy">Keep icons simple, large in their available space, and consistent in stroke behavior without extra inner decoration.</p>
+              <p class="usage-copy">Keep original icon geometry intact while updating tile shape, color framing, and surrounding panel composition.</p>
             </div>
           </article>
         </div>
@@ -449,9 +451,9 @@
           <h2>Current file references</h2>
         </div>
         <ul class="spec-list">
-          <li>Reusable color and UI tokens live in `assets/brand.css`.</li>
-          <li>Shared icon symbols are stored in `assets/marketlearn-icons.svg`.</li>
-          <li>This page is the reference, while `assets/brand.css` and `assets/marketlearn-icons.svg` are the files to copy into other projects.</li>
+          <li>Canonical reference material lives in `marketlearn-source/`.</li>
+          <li>Reusable landing-page implementation tokens live in `assets/brand.css`.</li>
+          <li>Shared icon symbols for the static site are stored in `assets/marketlearn-icons.svg`.</li>
         </ul>
       </section>
     </div>

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
   <metadata>
-    palette.bg=#f5efe6; palette.surface=#fbf6ee; palette.ink=#1d2430; palette.muted=#5f6b7a; palette.line=rgba(31,52,89,0.14); palette.accent=#c39a5b; palette.accent-strong=#1f4b8f; palette.warm=#e0bb7a; shading=none; fading=none
+    palette.bg=#f8fafc; palette.surface=#ffffff; palette.ink=#0f172a; palette.muted=#475569; palette.line=#e2e8f0; palette.accent=#4f46e5; palette.accent-2=#0d9488; palette.accent-3=#10b981; palette.accent-4=#f59e0b; palette.accent-5=#8b5cf6; palette.accent-6=#ef4444; shading=panel; framing=anmm-aligned
   </metadata>
   <symbol id="icon-marketlearn" viewBox="0 0 24 24">
     <path d="M12 20V10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

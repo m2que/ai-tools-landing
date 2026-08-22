@@ -10,7 +10,7 @@
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/brand.css" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SKN1Y8ZPF1"></script>
   <script>
@@ -21,7 +21,7 @@
   </script>
   <style>
     .nav-cta {
-      background: linear-gradient(135deg, var(--accent-strong), #163a6f);
+      background: var(--accent);
     }
 
     .cta-row {
@@ -60,44 +60,43 @@
     }
 
     .section-card {
-      padding: 40px;
+      padding: 32px;
     }
 
     #tools .section-card {
-      background: #183159;
-      border-color: rgba(255, 255, 255, 0.06);
+      background: linear-gradient(180deg, #1e1b4b 0%, #312e81 100%);
+      border-color: #4338ca;
     }
 
     #tools .section-label,
     #tools .section-head h2 {
-      color: #f6efe4;
+      color: #ffffff;
     }
 
     #tools .section-label {
       align-self: flex-start;
-      padding: 7px 12px;
-      background: #25436f;
-      border: 1px solid #355582;
+      padding: 8px 12px;
+      color: #1e1b4b;
     }
 
     #tools .section-copy {
-      color: #f6efe4;
+      color: #c7d2fe;
     }
 
     #tools .tool-card {
-      background: var(--surface);
+      background: var(--surface-subtle);
       border-color: var(--line);
     }
 
     #tools .tool-link {
-      color: var(--ink);
-      border-color: var(--line);
-      background: var(--surface-strong);
+      color: #4338ca;
+      border-color: var(--line-strong);
+      background: var(--surface-muted);
     }
 
     #tools .tool-link:hover {
       background: var(--surface);
-      border-color: var(--line);
+      border-color: var(--line-strong);
     }
 
     .section-head {
@@ -109,6 +108,11 @@
 
     .section-head h2 {
       font-size: clamp(2.2rem, 4vw, 3.35rem);
+      max-width: none;
+    }
+
+    #coursework .section-head h2 {
+      font-size: clamp(1.85rem, 3.2vw, 2.5rem);
     }
 
     .featured-grid,
@@ -116,14 +120,34 @@
     .workflow-grid,
     .trust-grid {
       display: grid;
-      gap: 22px;
+      gap: 18px;
+    }
+
+    .workflow-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .workflow-notes {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .workflow-notes-label {
+      margin-top: 30px;
+    }
+
+    .workflow-note {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
     }
 
     .feature-box h3,
     .tool-card h3,
     .workflow-card h3,
     .trust-card h3 {
-      font-size: 1.9rem;
+      font-size: 1.45rem;
       margin-bottom: 12px;
     }
 
@@ -134,12 +158,12 @@
     .tool-card,
     .workflow-card,
     .trust-card {
-      padding: 28px;
+      padding: 24px;
     }
 
     .tool-card-live {
-      padding: 32px;
-      background: var(--surface-strong);
+      padding: 28px;
+      background: var(--surface);
       border-color: var(--line);
     }
 
@@ -148,16 +172,16 @@
     }
 
     .tool-status-soon {
-      background: #f3ebdf;
-      color: #87612a;
+      background: #fff7ed;
+      color: #c2410c;
     }
 
     .tool-card-live h3 {
-      font-size: 2rem;
+      font-size: 1.65rem;
     }
 
     .tool-card-live .tool-copy {
-      color: var(--ink);
+      color: var(--muted);
     }
 
     .tool-card-live .tool-link {
@@ -194,7 +218,6 @@
       transition: transform 160ms ease, background 160ms ease;
     }
 
-    .workflow-grid,
     .trust-grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -205,8 +228,7 @@
       gap: 18px;
       align-items: center;
       padding: 28px;
-      border-radius: 6px;
-      background: var(--surface-strong);
+      background: var(--surface-subtle);
       border: 1px solid var(--line);
     }
 
@@ -221,7 +243,6 @@
       gap: 12px;
       padding-top: 18px;
       border-top: 1px solid var(--line);
-      font-family: "Source Sans 3", Arial, sans-serif;
       text-align: center;
     }
 
@@ -256,7 +277,7 @@
       }
 
       .section-card {
-        padding: 26px;
+        padding: 22px;
       }
     }
   </style>
@@ -404,26 +425,24 @@
     <section id="coursework">
       <div class="shell section-card">
         <div class="section-head">
-          <div class="section-label">Built for learning and decision-making</div>
           <h2>How to use MarketLearn</h2>
-          <p class="section-copy">
-            Each MarketLearn tool provides a specific instant analysis of a business or market complete with evidence for reports and proposals.
-          </p>
         </div>
 
         <div class="workflow-grid">
           <article class="workflow-card">
-            <h3>Business Reports</h3>
-            <p class="workflow-copy">Create stronger, evidence-based reports and recommendations with structured analyses that provide a clear strategic focus.</p>
+            <h3>Understand the Analysis</h3>
+            <p class="workflow-copy">Each report provides clear insights about a business or market along with suggestions for strategical implementation.</p>
           </article>
           <article class="workflow-card">
-            <h3>Case Study Prep</h3>
-            <p class="workflow-copy">Use the framework output to identify where a brand is strong, weak, distinctive, or strategically vulnerable.</p>
+            <h3>Use the Evidence</h3>
+            <p class="workflow-copy">Collect the linked evidence, including articles and industry reports, as sources for reports, proposals, and recommendations.</p>
           </article>
-          <article class="workflow-card">
-            <h3>Presentations</h3>
-            <p class="workflow-copy">Turn the analysis into visuals, clearer talking points, and evidence-based discussion for class presentations.</p>
-          </article>
+        </div>
+        <p class="section-copy workflow-notes-label">Use the analysis and evidence to create:</p>
+        <div class="workflow-notes">
+          <p class="workflow-note"><strong>Business Reports:</strong> Create stronger, evidence-based reports and recommendations with structured analyses that provide a clear strategic focus.</p>
+          <p class="workflow-note"><strong>Case Study Prep:</strong> Use the framework output to identify where a brand is strong, weak, distinctive, or strategically vulnerable.</p>
+          <p class="workflow-note"><strong>Presentations:</strong> Turn the analysis into visuals, clearer talking points, and evidence-based discussion for class presentations.</p>
         </div>
       </div>
     </section>
@@ -437,7 +456,7 @@
         <div class="pricing-box">
           <div>
             <p class="section-copy">
-              MarketLearn is being built as a shared student toolkit. Start with a free analysis, then unlock additional analyses and future tools through a shared credit model as the platform develops.
+              MarketLearn is a developing platform. Start with a free analysis, then unlock additional analyses and future tools as the platform develops.
             </p>
           </div>
           <div class="cta-row">
