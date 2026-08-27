@@ -65,23 +65,25 @@
     }
 
     #tools .section-card {
-      background: linear-gradient(180deg, #1e1b4b 0%, #312e81 100%);
-      border-color: #4338ca;
+      background: var(--surface);
+      border-color: var(--line);
     }
 
     #tools .section-label,
     #tools .section-head h2 {
-      color: #ffffff;
+      color: var(--ink);
     }
 
     #tools .section-label {
       align-self: flex-start;
       padding: 8px 12px;
-      color: #1e1b4b;
+      color: #64748b;
+      background: var(--surface-muted);
+      border-color: var(--line-strong);
     }
 
     #tools .section-copy {
-      color: #c7d2fe;
+      color: var(--muted);
       font-size: 1.05rem;
       font-weight: 600;
     }
@@ -171,6 +173,14 @@
     .workflow-card,
     .trust-card {
       padding: 24px;
+    }
+
+    .workflow-card {
+      border-top: 4px solid var(--workflow-stripe-color, var(--accent));
+    }
+
+    #coursework .workflow-card::before {
+      display: none;
     }
 
     .tool-card {
@@ -478,11 +488,11 @@
         </div>
 
         <div class="workflow-grid">
-          <article class="workflow-card">
+          <article class="workflow-card" style="--workflow-stripe-color: var(--accent)">
             <h3>Understand the Analysis</h3>
             <p class="workflow-copy">Each report provides clear insights about a business or market along with suggestions for strategical implementation.</p>
           </article>
-          <article class="workflow-card">
+          <article class="workflow-card" style="--workflow-stripe-color: var(--accent-2)">
             <h3>Use the Evidence</h3>
             <p class="workflow-copy">Collect the linked evidence, including articles and industry reports, as sources for reports, proposals, and recommendations.</p>
           </article>
