@@ -8,7 +8,7 @@ export default defineConfig({
       input: {
         main: 'index.html',
         assets: 'shared/brand/brand-assets.html',
-        template: 'template-preview.html'
+        template: 'shared/templates/template-preview.html'
       }
     }
   }
