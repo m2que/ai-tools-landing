@@ -1,5 +1,5 @@
 (() => {
-  const spritePath = 'assets/marketlearn-icons.svg';
+  const spritePath = 'marketlearn-icons.svg';
 
   const injectFallbackIcons = () => {
     const fallback = document.createElementNS('http://www.w3.org/2000/svg', 'svg');

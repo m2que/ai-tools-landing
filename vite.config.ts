@@ -7,7 +7,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'index.html',
-        assets: 'brand-assets.html',
+        assets: 'shared/brand/brand-assets.html',
         template: 'template-preview.html'
       }
     }
