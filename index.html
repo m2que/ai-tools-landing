@@ -164,7 +164,7 @@
     }
 
     .tool-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .tool-card,
@@ -173,8 +173,15 @@
       padding: 24px;
     }
 
+    .tool-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      aspect-ratio: 1 / 1;
+    }
+
     .tool-card-live {
-      padding: 28px;
+      padding: 24px;
       background: var(--surface);
       border-color: var(--line);
     }
@@ -204,7 +211,15 @@
       display: flex;
       align-items: center;
       gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .tool-card-divider {
+      height: 2px;
       margin-bottom: 16px;
+      background: var(--tool-divider-color, var(--accent));
+      border-radius: 999px;
+      flex-shrink: 0;
     }
 
     .tool-card-icon-cbbe svg {
@@ -225,9 +240,14 @@
       margin-bottom: 0;
     }
 
+    .tool-copy {
+      flex: 1;
+    }
+
     .tool-link {
       margin-top: 22px;
       transition: transform 160ms ease, background 160ms ease;
+      align-self: flex-start;
     }
 
     .trust-grid {
@@ -269,7 +289,6 @@
     @media (max-width: 980px) {
       .hero-grid,
       .pricing-box,
-      .tool-grid,
       .workflow-grid,
       .trust-grid {
         grid-template-columns: 1fr;
@@ -328,7 +347,7 @@
         </div>
 
         <div class="tool-grid">
-          <article class="tool-card tool-card-live">
+          <article class="tool-card tool-card-live" style="--tool-divider-color: var(--accent)">
             <div class="tool-card-head">
               <div class="tool-card-icon tool-card-icon-cbbe" aria-hidden="true">
                 <svg viewBox="0 0 24 24">
@@ -339,10 +358,11 @@
                 <h3>Consumer Based Brand Equity</h3>
               </div>
             </div>
+            <div class="tool-card-divider" aria-hidden="true"></div>
             <p class="tool-copy">Evaluate brand equity with structured explanations, score drivers, visual outputs, and evidence-oriented references.</p>
             <a class="tool-link" href="https://cbbe.marketlearn.online" target="_blank" rel="noopener">Open tool</a>
           </article>
-          <article class="tool-card tool-card-live">
+          <article class="tool-card tool-card-live" style="--tool-divider-color: var(--accent-2)">
             <div class="tool-card-head">
               <div class="tool-card-icon tool-card-icon-bpm" aria-hidden="true">
                 <svg viewBox="0 0 24 24">
@@ -353,10 +373,11 @@
                 <h3>Brand Position Mapper</h3>
               </div>
             </div>
+            <div class="tool-card-divider" aria-hidden="true"></div>
             <p class="tool-copy">Compare a brand's claimed position against likely customer associations, competitors, and strategic whitespace.</p>
             <a class="tool-link" href="https://bpm.marketlearn.online" target="_blank" rel="noopener">Open tool</a>
           </article>
-          <article class="tool-card tool-card-live">
+          <article class="tool-card tool-card-live" style="--tool-divider-color: var(--accent-3)">
             <div class="tool-card-head">
               <div class="tool-card-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24">
@@ -367,10 +388,11 @@
                 <h3>Brand Elements Analyzer</h3>
               </div>
             </div>
+            <div class="tool-card-divider" aria-hidden="true"></div>
             <p class="tool-copy">Analyze brand elements such as logos, colors, typography, and visual identity cues to generate structured brand insights.</p>
             <a class="tool-link" href="https://bea.marketlearn.online" target="_blank" rel="noopener">Open tool</a>
           </article>
-          <article class="tool-card">
+          <article class="tool-card" style="--tool-divider-color: var(--accent-4)">
             <div class="tool-status tool-status-soon">Coming soon</div>
             <div class="tool-card-head">
               <div class="tool-card-icon tool-card-icon-marketlearn" aria-hidden="true">
@@ -382,9 +404,10 @@
                 <h3>Brand Architecture Visualizer</h3>
               </div>
             </div>
+            <div class="tool-card-divider" aria-hidden="true"></div>
             <p class="tool-copy">Map relationships between master brands, sub-brands, endorsed brands, and product lines in a clearer strategic format.</p>
           </article>
-          <article class="tool-card">
+          <article class="tool-card" style="--tool-divider-color: var(--accent-5)">
             <div class="tool-status tool-status-soon">Coming soon</div>
             <div class="tool-card-head">
               <div class="tool-card-icon tool-card-icon-marketlearn" aria-hidden="true">
@@ -396,9 +419,10 @@
                 <h3>Brand Association Network Lab</h3>
               </div>
             </div>
+            <div class="tool-card-divider" aria-hidden="true"></div>
             <p class="tool-copy">An interactive educational tool for brand management students to visualize and manipulate Associative Network Memory Models. Explore how brand nodes and links create brand equity through spreading activation.</p>
           </article>
-          <article class="tool-card">
+          <article class="tool-card" style="--tool-divider-color: var(--accent-6)">
             <div class="tool-status tool-status-soon">Coming soon</div>
             <div class="tool-card-head">
               <div class="tool-card-icon tool-card-icon-marketlearn" aria-hidden="true">
@@ -410,6 +434,7 @@
                 <h3>BAV Brand Dashboard</h3>
               </div>
             </div>
+            <div class="tool-card-divider" aria-hidden="true"></div>
             <p class="tool-copy">An interactive dashboard that analyzes brands using the Brand Asset Valuator (BAV) model. Enter a brand name to receive scores and insights on its Differentiation, Relevance, Esteem, and Knowledge, based on data from verified sources.</p>
           </article>
         </div>
