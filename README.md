@@ -14,9 +14,13 @@ Static landing page for `marketlearn.online`.
 
 ## Local preview
 
-Open `index.html` in a browser, or serve the folder with any static server.
+- run `npm run dev` for the source site
+- run `npm run build` to sync shared brand assets and generate `dist/`
+- run `npm run preview` to test the built site
 
 ## Notes
 
 - Google Analytics is included directly in `index.html`
 - this page is intentionally static for a fast landing-page deployment
+- shared brand source files live in `shared/brand/`
+- deploy-served brand assets are synced into `public/brand/` via `npm run sync:brand`

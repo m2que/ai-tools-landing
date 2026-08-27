@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "sync:brand": "node scripts/sync-brand-assets.mjs",
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run sync:brand && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
