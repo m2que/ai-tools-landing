@@ -5,12 +5,20 @@ Static landing page for `marketlearn.online`.
 ## Purpose
 
 - position MarketLearn as an evidence-based AI toolkit for business students
-- feature `cbbe.marketlearn.online` as the lead live tool
+- feature `anmm.marketlearn.online` as the lead live tool
 - introduce the wider suite of brand and marketing analysis tools
+
+## Live tools
+
+- lead live tool: `https://anmm.marketlearn.online`
+- additional live tools:
+  - `https://cbbe.marketlearn.online`
+  - `https://bpm.marketlearn.online`
+  - `https://bea.marketlearn.online`
 
 ## Current live link target
 
-- `https://cbbe.marketlearn.online`
+- `https://anmm.marketlearn.online`
 
 ## Local preview
 

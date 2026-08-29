@@ -65,4 +65,12 @@ Repo path: `/Users/mamac3/Documents/1_apps/a_MarketLearn/ai-tools-landing`
 1. improve mobile landing page layout and behavior
 2. work on CBBE experience
 3. work on BPM experience
-4. prepare and launch ANMM
+4. refine and support live ANMM experience
+
+## Current live tools
+
+- lead live tool: `https://anmm.marketlearn.online`
+- additional live tools:
+  - `https://cbbe.marketlearn.online`
+  - `https://bpm.marketlearn.online`
+  - `https://bea.marketlearn.online`
