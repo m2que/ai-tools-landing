@@ -116,9 +116,17 @@ const TemplateGuidePage: React.FC = () => {
         </section>
 
         <footer className="template-guide-footer">
+          <a
+            className="template-guide-feedback-button"
+            href="https://forms.cloud.microsoft/r/BdSpx03G9i"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Share feedback
+          </a>
           <p>`© 2026 MarketLearn. AI-assisted content — verify before implementation.`</p>
           <p>
-            Contact: <a href="mailto:marketlearn.online@gmail.com">marketlearn.online@gmail.com</a>
+            <a href="mailto:marketlearn.online@gmail.com">Email us</a>
           </p>
         </footer>
       </main>

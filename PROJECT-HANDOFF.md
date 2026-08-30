@@ -22,6 +22,7 @@ Repo path: `/Users/mamac3/Documents/1_apps/a_MarketLearn/ai-tools-landing`
 
 - `shared/templates/template-preview.html` = browser-viewable template reference page
 - `shared/templates/template-preview.tsx` = template preview app entry
+- `marketlearn-source/components/marketlearn/MarketLearnToolTemplate.tsx` = source-of-truth React page template for tool page updates
 
 ## Public/deploy files
 
@@ -56,6 +57,9 @@ Repo path: `/Users/mamac3/Documents/1_apps/a_MarketLearn/ai-tools-landing`
 - use the shared icon system rather than creating one-off page icons
 - use `shared/brand/brand-assets.html` as the visual and asset reference page
 - use `shared/templates/template-preview.html` as the page/template reference while building
+- use `marketlearn-source/components/marketlearn/MarketLearnToolTemplate.tsx` as the structural source of truth for tool page refreshes
+- preserve the template footer CTA: `Share feedback` linking to `https://forms.cloud.microsoft/r/BdSpx03G9i`
+- preserve the template email CTA: `Email us` linking to `mailto:marketlearn.online@gmail.com`
 - keep new pages aligned with the shared brand system: typography, icon usage, spacing, color language, and component patterns
 - make sure rebranded or new pages use the correct shared components, correct font direction, and correct brand asset paths
 - avoid creating disconnected per-page branding unless explicitly asked
